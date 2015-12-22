@@ -12,7 +12,11 @@
 		<item
 			android:id="@+id/navi_group1_item1"
 			android:icon="@drawable/ic_android_black_24dp"
+<<<<<<< HEAD
 			android:title="학생회공지"/>
+=======
+			android:title="공지"/>
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 		<item
 			android:id="@+id/navi_group1_item2"
 			android:icon="@drawable/ic_android_black_24dp"
@@ -33,7 +37,11 @@
 			<item
 				android:id="@+id/navigation_sub_item_1"
 				android:icon="@drawable/ic_android_black_24dp"
+<<<<<<< HEAD
 				android:title="About"/>
+=======
+				android:title="개발자정보"/>
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 		</menu>
 	</item>
 	<item

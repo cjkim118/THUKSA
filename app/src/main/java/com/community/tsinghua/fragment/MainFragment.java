@@ -5,6 +5,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
+=======
+import android.view.Window;
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 
 import com.community.tsinghua.R;
 

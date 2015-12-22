@@ -17,6 +17,7 @@
 		app:borderWidth="0dp"
 		app:rippleColor="@color/color_ripple_color"/>
 
+<<<<<<< HEAD
 	<android.support.design.widget.FloatingActionButton
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -26,4 +27,6 @@
 		app:fabSize="mini"
 		app:rippleColor="@color/color_ripple_color"/>
 
+=======
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 </android.support.design.widget.CoordinatorLayout>
