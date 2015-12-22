@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#871e94"
-    tools:context="com.example.jaeyung.form.MetroUI_Activity">
+    tools:context=".fragment.MainFragment">
 
     <TextView
         android:text="칭화대 한국유학생회 공식메일 tsinghuakr@hotmail.com"
@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:id="@+id/advertisement"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:background="@mipmap/ic_launcher"
         android:layout_above="@+id/textView13"
         android:layout_alignParentRight="true"
@@ -29,7 +29,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="9주"
         android:textStyle="bold"
@@ -86,7 +85,6 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
         android:text="2015/12/01 화요일"
         android:textColor="#FFFFFF"
         android:id="@+id/textView15"
@@ -94,70 +92,78 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/advertisement"
-        android:layout_below="@+id/textView15"
+        android:id="@+id/Metro_layout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
-        android:id="@+id/Metro_layout">
+        android:layout_below="@+id/textView15">
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight=".5"
-            >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight=".5"
+                android:layout_weight="0.5"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#FFFFFF"
                 android:text="열린공간"
                 android:textStyle="bold"
-                android:textSize="45dp"
                 android:id="@+id/textView17"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="  학생회"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text=" 학생회"
                 android:textStyle="bold"
-                android:layout_weight=".25"
                 android:gravity="left|center"
                 android:background="#ebb5f1"
                 android:textColor="#502376"
-                android:id="@+id/textView21"/>
+                android:id="@+id/textView21"
+                android:layout_weight=".25"
+                android:layout_below="@+id/textView17"/>
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#502376"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#c172cb"
+                android:background="#c172ca"
                 android:textStyle="bold"
                 android:id="@+id/textView16"
-                android:gravity="right|center"/>
+                android:text="Q@A  "
+                android:gravity="right|center"
+                android:layout_below="@+id/textView21"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight=".5">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="공지  "
                 android:textStyle="bold"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#c172cb"
+                android:background="#c172ca"
                 android:gravity="right|center"
                 android:textColor="#502376"
                 android:layout_weight=".25"
@@ -166,8 +172,8 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="  정보"
-                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textStyle="bold"
                 android:background="#ebb5f1"
                 android:gravity="left|center"
@@ -176,17 +182,17 @@
                 android:id="@+id/textView19"/>
 
             <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="등업신청"
                 android:textStyle="bold"
-                android:textSize="45dp"
                 android:textColor="#FFFFFF"
                 android:gravity="center"
                 android:id="@+id/textView20"
-                android:layout_weight=".5" />
+                android:layout_weight="0.5" />
         </LinearLayout>
     </LinearLayout>
 
-
 </RelativeLayout>
+

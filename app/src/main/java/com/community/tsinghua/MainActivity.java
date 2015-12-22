@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity
 	@InjectView(R.id.drawer_layout)
 	DrawerLayout drawerLayout;
 
+
+
 	private ActionBarDrawerToggle mDrawerToggle;
 
 	private PrefManager pref;
@@ -71,6 +74,7 @@ public class MainActivity extends AppCompatActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		//requestWindowFeature(Window.FEATURE_NO_TITLE);
+
 
 		apiTest();
 		ButterKnife.inject(this);
