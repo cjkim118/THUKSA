@@ -1,6 +1,5 @@
 package com.community.tsinghua.fragment;
 
-<<<<<<< HEAD
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -27,7 +26,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import butterknife.ButterKnife;
-=======
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -35,7 +33,6 @@ import android.widget.TextView;
 
 import com.community.tsinghua.R;
 
->>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 
 /**
  * Created by CJKIM on 2015. 11. 27..
