@@ -1,5 +1,33 @@
 package com.community.tsinghua.fragment;
 
+<<<<<<< HEAD
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.community.tsinghua.JSON.JSONParser;
+import com.community.tsinghua.R;
+
+import org.apache.http.NameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import butterknife.ButterKnife;
+=======
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +35,7 @@ import android.widget.TextView;
 
 import com.community.tsinghua.R;
 
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 
 /**
  * Created by CJKIM on 2015. 11. 27..

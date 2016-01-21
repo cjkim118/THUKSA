@@ -17,7 +17,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+<<<<<<< HEAD
+import com.community.tsinghua.JSON.JSONParser;
+=======
 import com.community.tsinghua.JSONParser;
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 import com.community.tsinghua.fragment.CommunityFragment;
 
 import org.apache.http.NameValuePair;
@@ -114,8 +118,13 @@ public class AppBarActivity extends AppCompatActivity {
 		@Override
 		public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
 			View view
+<<<<<<< HEAD
+				= LayoutInflater.from(viewGroup.getContext())
+								.inflate(R.layout.custom_listview_item, viewGroup, false);
+=======
 					= LayoutInflater.from(viewGroup.getContext())
 					.inflate(R.layout.custom_listview_item, viewGroup, false);
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 			return new MyViewHolder(view);
 		}
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<LinearLayout
+=======
 <RelativeLayout
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
@@ -7,6 +11,10 @@
 	android:paddingLeft="@dimen/activity_horizontal_margin"
 	android:paddingRight="@dimen/activity_horizontal_margin"
 	android:paddingTop="@dimen/activity_vertical_margin"
+<<<<<<< HEAD
+	tools:context=".fragment.MainFragment">
+
+=======
 	tools:context=".fragment.MainFragment"
 	android:background="#502376">
 
@@ -69,10 +77,22 @@
 		android:autoText="false"
 		android:textAlignment="gravity"
 		android:gravity="center" />
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+<<<<<<< HEAD
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:text="테스트테스트"/>
+
+	<ListView
+		android:id="@+id/list_view"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>
+=======
 		android:textAppearance="?android:attr/textAppearanceSmall"
 		android:textColor="#FFFFFF"
 		android:id="@+id/PM25"
@@ -212,3 +232,4 @@
 
 </RelativeLayout>
 
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6

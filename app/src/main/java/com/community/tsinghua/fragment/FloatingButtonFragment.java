@@ -2,7 +2,10 @@ package com.community.tsinghua.fragment;
 
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
+<<<<<<< HEAD
+=======
 import android.support.design.widget.FloatingActionButton;
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -51,5 +54,11 @@ public class FloatingButtonFragment extends Fragment
 	}
 
 	@Override
+<<<<<<< HEAD
+	public void onClick(View v) {
+
+	}
+=======
 	public void onClick(View v) { }
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 }

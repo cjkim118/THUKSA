@@ -1,10 +1,18 @@
 package com.community.tsinghua;
 
+<<<<<<< HEAD
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Bundle;
+=======
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -12,16 +20,43 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+<<<<<<< HEAD
+import android.text.format.DateUtils;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+=======
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import android.widget.TextView;
 import android.widget.Toast;
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
+<<<<<<< HEAD
+import com.community.tsinghua.R;
+import com.community.tsinghua.app.AppConfig;
+import com.community.tsinghua.fragment.FloatingButtonFragment;
+import com.community.tsinghua.fragment.FloatingLabelFragment;
+import com.community.tsinghua.fragment.MainFragment;
+import com.community.tsinghua.fragment.TabsFragment;
+import com.community.tsinghua.helper.ParseUtils;
+import com.community.tsinghua.helper.PrefManager;
+import com.community.tsinghua.model.Message;
+import com.parse.Parse;
+import com.parse.ParseInstallation;
+
+import java.util.ArrayList;
+import java.util.List;
+=======
 import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
 import com.baidu.apistore.sdk.ApiCallBack;
@@ -39,6 +74,7 @@ import com.community.tsinghua.helper.PrefManager;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 
 public class MainActivity extends AppCompatActivity
 	implements NavigationView.OnNavigationItemSelectedListener {
@@ -52,6 +88,15 @@ public class MainActivity extends AppCompatActivity
 
 	private ActionBarDrawerToggle mDrawerToggle;
 
+<<<<<<< HEAD
+	private static String TAG = MainActivity.class.getSimpleName();
+
+	private Toolbar mToolbar;
+	private ListView listView;
+	private List<Message> listMessages = new ArrayList<>();
+	private MessageAdapter adapter;
+	private PrefManager pref;
+=======
 	private PrefManager pref;
 	JSONObject json = null;
 	JSONArray contacts = null;
@@ -65,21 +110,37 @@ public class MainActivity extends AppCompatActivity
 	private static final String TAG_PM2 = "city";
 	private static final String TAG_PM3 = "pm25";
 
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+<<<<<<< HEAD
+		ButterKnife.inject(this);
+
+		Parse.initialize(this, AppConfig.PARSE_APPLICATION_ID, AppConfig.PARSE_CLIENT_KEY);
+		ParseInstallation.getCurrentInstallation().saveInBackground();
+=======
 		//requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		apiTest();
 		ButterKnife.inject(this);
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 
 		setSupportActionBar(toolBar);
 
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
+<<<<<<< HEAD
+		listView = (ListView) findViewById(R.id.list_view);
+		adapter = new MessageAdapter(this);
+		pref = new PrefManager(getApplicationContext());
+
+		listView.setAdapter(adapter);
+=======
 
 		pref = new PrefManager(getApplicationContext());
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 
 		Intent intent = getIntent();
 
@@ -97,9 +158,67 @@ public class MainActivity extends AppCompatActivity
 		drawerLayout.setDrawerListener(mDrawerToggle);
 
 		navigationView.setNavigationItemSelectedListener(this);
+<<<<<<< HEAD
+	}
+
+	@Override
+	protected void onNewIntent(Intent intent) {
+		super.onNewIntent(intent);
+		String message = intent.getStringExtra("message");
+
+		Message m = new Message(message, System.currentTimeMillis());
+		listMessages.add(0, m);
+		adapter.notifyDataSetChanged();
+	}
+
+	private class MessageAdapter extends BaseAdapter {
+
+		LayoutInflater inflater;
+
+		public MessageAdapter(Activity activity) {
+			inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		}
+
+		@Override
+		public int getCount() {
+			return listMessages.size();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return listMessages.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return position;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			View view = convertView;
+			if (view == null) {
+				view = inflater.inflate(R.layout.list_row, null);
+			}
+
+			TextView txtMessage = (TextView) view.findViewById(R.id.message);
+			TextView txtTimestamp = (TextView) view.findViewById(R.id.timestamp);
+
+			Message message = listMessages.get(position);
+			txtMessage.setText(message.getMessage());
+
+			CharSequence ago = DateUtils.getRelativeTimeSpanString(message.getTimestamp(), System.currentTimeMillis(),
+					0L, DateUtils.FORMAT_ABBREV_ALL);
+
+			txtTimestamp.setText(String.valueOf(ago));
+
+			return view;
+		}
+=======
 
 		PushManager.startWork(getApplicationContext(),
 				PushConstants.LOGIN_TYPE_API_KEY, "wgUZ4S4ICFmyUdAoGZPCsChr");
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 	}
 
 	@Override
@@ -129,8 +248,12 @@ public class MainActivity extends AppCompatActivity
 				fragment = MainFragment.newInstance();
 				break;
 			case R.id.navi_group1_item1:
+<<<<<<< HEAD
+				fragment = FloatingLabelFragment.newInstance();
+=======
 				Intent intent = new Intent(MainActivity.this, NoticeActivity.class);
 				startActivity(intent);
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 				break;
 			case R.id.navi_group1_item2:
 				fragment = FloatingButtonFragment.newInstance();
@@ -143,7 +266,11 @@ public class MainActivity extends AppCompatActivity
 				break;
 			case R.id.action_logout:
 				pref.logout();
+<<<<<<< HEAD
+				Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+=======
 				intent = new Intent(MainActivity.this, LoginActivity.class);
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 				startActivity(intent);
 				finish();
@@ -153,14 +280,21 @@ public class MainActivity extends AppCompatActivity
 		if (fragment != null) {
 			FragmentManager manager = getSupportFragmentManager();
 			manager.beginTransaction()
+<<<<<<< HEAD
+				   .replace(R.id.main_frame, fragment)
+				   .commit();
+=======
 					.replace(R.id.main_frame, fragment)
 					.commit();
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 
 			drawerLayout.closeDrawers();
 			menuItem.setChecked(true);
 		}
 		return true;
 	}
+<<<<<<< HEAD
+=======
 	boolean mFlag;
 
 	@Override
@@ -249,5 +383,6 @@ public class MainActivity extends AppCompatActivity
 				});
 
 	}
+>>>>>>> 5887ef0075624b536befdfb9505eb731337dd3c6
 
 }
